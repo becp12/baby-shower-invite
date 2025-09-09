@@ -77,7 +77,7 @@ function App() {
                             For those who’ve asked, here’s our baby registry:
                         </p>
                         {/* <button className="rsvp-btn"> */}
-                            <a href="https://www.example.com/your-registry-link" target="_blank" class="registry-btn">View Our Registry</a>
+                            <a href="https://registry.whattoexpect.com/baby-registry/baby-preece" target="_blank" class="registry-btn">View Our Registry</a>
                         {/* </button> */}
                         
                     </section>
