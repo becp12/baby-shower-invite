@@ -4,7 +4,8 @@ import ultrasoundImage from './images/20weekultrasoundnodetail.jpg';
 import bear from './images/lavender-bear-flipped.png';
 import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
-
+import Countdown from "./components/CountdownTimer.jsx";
+import { LinearGradient as Lg } from "react-text-gradients";
 
 function App() {
     const [form, setForm] = useState({
@@ -58,12 +59,23 @@ function App() {
                 </div>
             </div>
 
+            <Countdown eventDate="2025-09-21T14:00:00-07:00" />
+
             <div className="content-row">
                 <div className="event-info">
                     <h2 className="event-title">Event Information</h2>
                     <p>📆 2:00PM, Sunday, September 21st, 2025</p>
                     <p>📌 Bec's House! If you need my address, just ask! We have plenty of parking room too</p>
-                    <p>🌈 The color theme is Pastel Rainbow</p>
+                    <p>
+                        🌈 The color theme is&nbsp;
+                        <Lg gradient={["to right","#b39ddb, #f8bbd0, #f4a460, #a5d6a7, #81d4fa"]}
+                        style={{ fontWeight: "bold", textShadow: "0 1px 4px rgba(0,0,0,0.12)" }}>
+                        Pastel Rainbow
+                        </Lg> with
+                        <span style={{ color: 'HotPink',  fontWeight: "bold", textShadow: "0 1px 4px rgba(0,0,0,0.12)", }}> bright pinks </span>
+                        and
+                        <span style={{ color: 'MediumPurple',  fontWeight: "bold", textShadow: "0 1px 4px rgba(0,0,0,0.12)", }}> bright purples</span>
+                    </p>
                     <p>I can't wait to celebrate with you! 🎈</p>
                     <p>
                         Join us for a fun afternoon filled with games, food, and laughter as
@@ -101,7 +113,10 @@ function App() {
                     <h2 className="rsvp-title">RSVP</h2>
                     <p className="rsvp-deadline">Please RSVP by Sunday September 14th</p>
                     {submitted ? (
-                        <p>Thank you for your RSVP!</p>
+                        <>
+                            <p>Thank you for your RSVP!</p>
+
+                        </>
                     ) : (
                         <form className="rsvp-form" onSubmit={handleSubmit}>
                             <input
@@ -137,7 +152,7 @@ function App() {
                                 onChange={handleChange}
                             />
                             <div className="recaptcha-container">
-                                <ReCAPTCHA 
+                                <ReCAPTCHA
                                     sitekey="6Ldb4cIrAAAAAEDKtT9Qb7ypNRfgGQctOCBLJmRx"
                                     onChange={handleCaptcha}
                                 />
