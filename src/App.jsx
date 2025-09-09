@@ -3,6 +3,7 @@ import "./styles/main.css";
 import ultrasoundImage from './images/20weekultrasoundnodetail.jpg';
 import bear from './images/lavender-bear-flipped.png';
 import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 function App() {
@@ -13,7 +14,14 @@ function App() {
         message: "",
     });
 
+    const [captcha, setCaptcha] = useState(null);
+
+
     const [submitted, setSubmitted] = useState(false);
+
+    const handleCaptcha = (value) => {
+        setCaptcha(value);
+    };
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -21,6 +29,10 @@ function App() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (!captcha) {
+            alert("Please complete the captcha.");
+            return;
+        }
         emailjs.send(
             "service_690cmab",
             "template_5f9nfgi",
@@ -59,27 +71,27 @@ function App() {
                     </p>
                     <p>
                         We will have a variety of games and activities including:
-                        <ul>
-                            <li>Decorate a Onesie</li>
-                            <li>Guess the Baby Food</li>
-                            <li>Guess The Baby</li>
-                        </ul>
                     </p>
+                    <ul>
+                        <li>Decorate a Onesie</li>
+                        <li>Guess the Baby Food</li>
+                        <li>Guess The Baby</li>
+                    </ul>
                     <p>Please bring along a baby photo of yourself for the <i>Guess The Baby</i> game!</p>
                     <p>
                         We will also be doing a <i>Guess The Due Date</i> game so if you would like to participate in that, please bring some cash. The person who's guess is closest to the date and time will win the pool.</p>
 
 
-                    <section class="registry">
-                        <h2 class="rsvp-title">🎁 Registry</h2>
+                    <section className="registry">
+                        <h2 className="rsvp-title">🎁 Registry</h2>
                         <p>
                             Your company is the real celebration. Gifts are welcome but never expected.
                             For those who’ve asked, here’s our baby registry:
                         </p>
                         {/* <button className="rsvp-btn"> */}
-                            <a href="https://registry.whattoexpect.com/baby-registry/baby-preece" target="_blank" class="registry-btn">View Our Registry</a>
+                        <a href="https://registry.whattoexpect.com/baby-registry/baby-preece" target="_blank" className="registry-btn">View Our Registry</a>
                         {/* </button> */}
-                        
+
                     </section>
 
 
@@ -124,6 +136,12 @@ function App() {
                                 value={form.message}
                                 onChange={handleChange}
                             />
+                            <div className="recaptcha-container">
+                                <ReCAPTCHA 
+                                    sitekey="6Ldb4cIrAAAAAEDKtT9Qb7ypNRfgGQctOCBLJmRx"
+                                    onChange={handleCaptcha}
+                                />
+                            </div>
                             <button type="submit" className="rsvp-btn">Send RSVP</button>
                         </form>
                     )}
