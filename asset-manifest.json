@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.802afbfd.chunk.css",
-    "main.js": "/static/js/main.506a8149.chunk.js",
-    "main.js.map": "/static/js/main.506a8149.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9fbea007.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9fbea007.js.map",
-    "static/js/2.fbc4def5.chunk.js": "/static/js/2.fbc4def5.chunk.js",
-    "static/js/2.fbc4def5.chunk.js.map": "/static/js/2.fbc4def5.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.802afbfd.chunk.css.map": "/static/css/main.802afbfd.chunk.css.map",
-    "static/js/2.fbc4def5.chunk.js.LICENSE.txt": "/static/js/2.fbc4def5.chunk.js.LICENSE.txt",
-    "static/media/20weekultrasoundnodetail.bf32c10f.jpg": "/static/media/20weekultrasoundnodetail.bf32c10f.jpg",
-    "static/media/main.css": "/static/media/confetti-background.114c99c5.jpg",
-    "static/media/lavender-bear-flipped.d2a2c76c.png": "/static/media/lavender-bear-flipped.d2a2c76c.png"
+    "main.css": "/baby-shower-website/static/css/main.2dd4b9db.chunk.css",
+    "main.js": "/baby-shower-website/static/js/main.506a8149.chunk.js",
+    "main.js.map": "/baby-shower-website/static/js/main.506a8149.chunk.js.map",
+    "runtime-main.js": "/baby-shower-website/static/js/runtime-main.a9184a64.js",
+    "runtime-main.js.map": "/baby-shower-website/static/js/runtime-main.a9184a64.js.map",
+    "static/js/2.fbc4def5.chunk.js": "/baby-shower-website/static/js/2.fbc4def5.chunk.js",
+    "static/js/2.fbc4def5.chunk.js.map": "/baby-shower-website/static/js/2.fbc4def5.chunk.js.map",
+    "index.html": "/baby-shower-website/index.html",
+    "static/css/main.2dd4b9db.chunk.css.map": "/baby-shower-website/static/css/main.2dd4b9db.chunk.css.map",
+    "static/js/2.fbc4def5.chunk.js.LICENSE.txt": "/baby-shower-website/static/js/2.fbc4def5.chunk.js.LICENSE.txt",
+    "static/media/20weekultrasoundnodetail.bf32c10f.jpg": "/baby-shower-website/static/media/20weekultrasoundnodetail.bf32c10f.jpg",
+    "static/media/main.css": "/baby-shower-website/static/media/confetti-background.114c99c5.jpg",
+    "static/media/lavender-bear-flipped.d2a2c76c.png": "/baby-shower-website/static/media/lavender-bear-flipped.d2a2c76c.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.9fbea007.js",
+    "static/js/runtime-main.a9184a64.js",
     "static/js/2.fbc4def5.chunk.js",
-    "static/css/main.802afbfd.chunk.css",
+    "static/css/main.2dd4b9db.chunk.css",
     "static/js/main.506a8149.chunk.js"
   ]
 }
