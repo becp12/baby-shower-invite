@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "A fun and interactive website for a baby shower.",
   "main": "src/index.js",
+  "homepage": "https://becp12.github.io/baby-shower-invite",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -20,17 +23,11 @@
   "dependencies": {
     "emailjs-com": "^3.2.0",
     "install": "^0.13.0",
-    "npm": "^11.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-google-recaptcha": "^3.1.0",
     "react-scripts": "4.0.3",
     "react-text-gradients": "^1.0.2"
-  },
-  "homepage": "http://yourhomepage.com",
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/yourusername/baby-shower-website.git"
   },
   "browserslist": {
     "production": [
@@ -43,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
